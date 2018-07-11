@@ -29,7 +29,7 @@ class SuricataClient(object):
     def get_path(self, param):
         return os.path.join(self.base_dir, param)
 
-    def generate_rules(self, generate_md5_rules=False, generate_iprep=False):
+    def generate_rules(self, generate_iprep=False, generate_md5_rules=False):
         with self.get_destination('otx_file_rules.rules') as file_rule_file:
             with self.get_destination('reputation.list') as rep_file:
                 md5_file_count = 0
